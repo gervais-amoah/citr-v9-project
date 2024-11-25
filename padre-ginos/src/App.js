@@ -9,28 +9,16 @@ const App = () => {
   return React.createElement("div", {}, [
     React.createElement("h1", {}, "Padre Gino's"),
     React.createElement(Pizza, {
-      name: "The Pepperoni",
-      description: "The best pizza ever",
+      name: "The Pepperoni Pizza",
+      description: "Mozzarella Cheese, Pepperoni",
     }),
     React.createElement(Pizza, {
-      name: "The Hawaiian",
-      description: "This one is so good!",
+      name: "The Hawaiian Pizza",
+      description: "Sliced Ham, Pineapple, Mozzarella Cheese",
     }),
     React.createElement(Pizza, {
-      name: "The Margherita",
-      description: "Made with love",
-    }),
-    React.createElement(Pizza, {
-      name: "The Meat Lovers",
-      description: "The favorite for Americans",
-    }),
-    React.createElement(Pizza, {
-      name: "The Vegetarian",
-      description: "The best vegetarian pizza",
-    }),
-    React.createElement(Pizza, {
-      name: "The Chicken Pizza",
-      description: "Chicken nuggets on a pizza, wtf UK",
+      name: "The Big Meat Pizza",
+      description: "Bacon, Pepperoni, Italian Sausage, Chorizo Sausage",
     }),
   ]);
 };
