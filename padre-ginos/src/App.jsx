@@ -6,8 +6,14 @@ const App = () => {
   return (
     <div>
       <h1>Padre Gino's - Order Now</h1>
-      <Pizza name="Pepperoni" description="Mozzarella Cheese, Pepperoni" />
-      <Pizza name="Hawaiian" description="Sliced Ham, Pineapple, Mozzarella Cheese" />
+      <Pizza name="Pepperoni" description="Mozzarella Cheese, Pepperoni"
+      img="/public/pizzas/pepperoni.webp"
+      />
+      <Pizza name="Hawaiian" description="Sliced Ham, Pineapple, Mozzarella Cheese"
+      img="/public/pizzas/hawaiian.webp"
+      />
+      <Pizza name="Americano" description="Sliced Ham, Pineapple, Mozzarella Cheese"
+      img="/public/pizzas/big_meat.webp"      />
     </div>
   )
 };
