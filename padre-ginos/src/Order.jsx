@@ -16,8 +16,8 @@ export default function Order() {
 
   if (!loading) {
     selectedPizza = pizzaTypes.find((pizza) => pizza.id === pizzaType);
+    price = intl.format(selectedPizza?.sizes[pizzaSize])
   }
-  price = intl.format(selectedPizza?.sizes[pizzaSize])
 
   async function fetchPizzas() {
     setLoading(true);
