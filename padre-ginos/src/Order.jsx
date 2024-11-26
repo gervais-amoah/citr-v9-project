@@ -3,7 +3,7 @@ import Pizza from "./Pizza";
 
 const intl = new Intl.NumberFormat("en-US", {
   style: "currency",
-  currency: "USD",
+  currency: "EUR",
 });
 
 export default function Order() {
@@ -17,6 +17,7 @@ export default function Order() {
   if (!loading) {
     selectedPizza = pizzaTypes.find((pizza) => pizza.id === pizzaType);
   }
+  price = intl.format(selectedPizza?.sizes[pizzaSize])
 
   async function fetchPizzas() {
     setLoading(true);
@@ -93,7 +94,7 @@ export default function Order() {
             description={selectedPizza?.description}
             image={selectedPizza?.image}
           />
-          <p>{intl.format(selectedPizza?.sizes[pizzaSize])}</p>
+          <p>{price}</p>
         </div>
       </form>
     </div>
