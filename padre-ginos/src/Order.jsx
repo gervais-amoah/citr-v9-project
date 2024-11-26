@@ -16,7 +16,7 @@ export default function Order() {
 
   if (!loading) {
     selectedPizza = pizzaTypes.find((pizza) => pizza.id === pizzaType);
-    price = intl.format(selectedPizza?.sizes[pizzaSize])
+    price = intl.format(selectedPizza?.sizes[pizzaSize]);
   }
 
   async function fetchPizzas() {
@@ -38,14 +38,16 @@ export default function Order() {
         <div>
           <div>
             <label htmlFor="pizza-type">Pizza Type</label>
-            <select name="pizza-type" value={pizzaType} onChange={(e) => setPizzaType(e.target.value)}>
-              {
-                pizzaTypes.map((pizza) => (
-                  <option key={pizza.id} value={pizza.id}>
-                    {pizza.name}
-                  </option>
-                ))
-              }
+            <select
+              name="pizza-type"
+              value={pizzaType}
+              onChange={(e) => setPizzaType(e.target.value)}
+            >
+              {pizzaTypes.map((pizza) => (
+                <option key={pizza.id} value={pizza.id}>
+                  {pizza.name}
+                </option>
+              ))}
             </select>
           </div>
           <div>
